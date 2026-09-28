@@ -40,6 +40,11 @@ Ghi tên biến và **nguồn giá trị**, không ghi giá trị:
 Các lệnh gọi tới service đã deploy:
 
 ```bash
+# Nạp DEPLOY_API_KEY từ .env mà không in giá trị ra terminal
+set -a
+source .env
+set +a
+
 # 1. Liveness
 curl -i https://agent-production-104f.up.railway.app/health
 # HTTP/1.1 200 OK
